@@ -1,14 +1,14 @@
 import React from 'react';
-import Dashboard from "../../Components/Dashboard/Dashboard";
 import Pagefor from '../../Components/pagefor/pagefor';
+import DrawerNavbar from "../../Components/DrawerNavbar/DrawerNavbar";
 
 const ComponentTypes = props =>  {
     return (<div>
-    
-    <Dashboard>
-       <Pagefor/>
-    </Dashboard>
-    
+    <DrawerNavbar title="Component Types">
+        <Pagefor/>
+
+    </DrawerNavbar>
+
     </div>)
 }
 

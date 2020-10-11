@@ -1,8 +1,8 @@
 import React , {Component} from 'react';
 import axios from 'axios';
-import NAV from '../../Components/AppBar/AppBar';
 import CRUDGrid from '../../Components/CRUDGrid/CRUDGrid';
 import { withRouter } from "react-router-dom";
+import DrawerNavbar from "../../Components/DrawerNavbar/DrawerNavbar";
 
 
 
@@ -42,16 +42,12 @@ class ModulePage extends Component {
     render() {
         return (
             <div>
-                <div className = "row">
-                    <div className="col-12">
-                    <NAV/>
-                    </div>
-                    </div>
-                    <div className = "row">
-                    <div className="col-12">
-                        <CRUDGrid data = {this.state.data} columns = {this.state.columns} title = {this.state.title}/>
-                    </div>
-                    </div>
+                <DrawerNavbar title="Module">
+                    <CRUDGrid data = {this.state.data} columns = {this.state.columns} title = {this.state.title}/>
+
+                </DrawerNavbar>
+
+
             </div>
         );
     }
